@@ -50,8 +50,8 @@ def write_to_csv(data):
 def submit_form():
     if request.method == 'POST':
         try:
-            data=request.form.to_dict()         #{'email': 'sachin1712003@gmail.com', 'subject': 'abc', 'message': 'hi'}
-            print(f"Received data: {data}")     #Remove the {data} when deploying the server. As it shows the data in logs. It useful for testing.
+            data=request.form.to_dict()         
+            print(f"Received data: {data}") 
             write_to_csv(data)
             print("Data written to database.csv successfully")
             return redirect('thankyou.html')
@@ -62,6 +62,6 @@ def submit_form():
 
 
 # #test code.
-# data = {'email': 'sachin1712003@gmail.com', 'subject': 'abc', 'message': 'hi'}
+# data = {'email': 'test@test.com', 'subject': 'abc', 'message': 'hi'}
 # write_to_csv(data)
 
