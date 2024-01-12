@@ -22,7 +22,7 @@ def html_page(page_name):
 
 '''-----------------------------------------------------------------------------------------------------'''
 
-#Disabling Favicon Request (chatgpt)
+#Disabling Favicon Request.
 @app.route('/favicon.ico')
 def favicon():
     return app.send_static_file('favicon.ico')
